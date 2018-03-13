@@ -63,6 +63,42 @@ private heroes:Heroe[] = [
     return this.heroes;
   }
 
+  getHeroe(identificador:string){
+    return this.heroes[identificador];
+  }
+
+  buscarHeroePorNombre(nombreABuscar:string):HeroeDetalle{
+    let contador:number = 0;
+    nombreABuscar = nombreABuscar.toLowerCase();
+    for(let heroe of this.heroes){
+      let nombre = heroe.nombre.toLowerCase();
+      if(nombre.indexOf(nombreABuscar) >= 0){
+        let heroeDetalle: HeroeDetalle = {
+          nombre: heroe.nombre,
+          bio:heroe.bio,
+          img:heroe.img,
+          aparicion:heroe.aparicion,
+          casa:heroe.casa,
+          imagenCasa:"",
+          id:contador
+        };
+        return heroeDetalle;
+      }else{
+        contador = contador +1;
+      }
+    }
+  }
+  buscarHeroes(terminoBusqueda:string):Heroe[]{
+    let arregloHeroes:Heroe[] = [];
+    terminoBusqueda = terminoBusqueda.toLowerCase();
+    for(let heroe of this.heroes){
+      let nombre = heroe.nombre.toLowerCase();
+      if(nombre.indexOf(terminoBusqueda) >= 0){
+        arregloHeroes.push(heroe);
+      }
+    }
+    return arregloHeroes;
+  }
 
 }
 
@@ -72,4 +108,14 @@ export interface Heroe{
   img:string;
   aparicion:string;
   casa:string;
+}
+
+export interface HeroeDetalle{
+  nombre: string;
+  bio:string;
+  img:string;
+  aparicion:string;
+  casa:string;
+  imagenCasa:string;
+  id:number;
 }
