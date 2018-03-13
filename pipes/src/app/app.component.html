@@ -1,0 +1,146 @@
+<div class="container">
+  <br>
+  <h1>Pipes</h1>
+  <hr>
+  <table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Variable</th>
+        <th scope="col">Pipe</th>
+        <th scope="col">Modo de uso</th>
+        <th scope="col">Producto</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{nombre}} </td>
+        <td>uppercase</td>
+        <td>'&#123;'&#123;nombre | uppercase &#125;&#125;</td>
+        <td>{{nombre | uppercase}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}} </td>
+        <td>lowercase</td>
+        <td>'&#123;'&#123;nombre | lowercase &#125;&#125;</td>
+        <td>{{nombre | lowercase}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}} </td>
+        <td>slice:3</td>
+        <td>'&#123;'&#123;nombre | slice:3 &#125;&#125;</td>
+        <td>{{nombre | slice:3}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}} </td>
+        <td>slice:0:3</td>
+        <td>'&#123;'&#123;nombre | slice:0:3 &#125;&#125;</td>
+        <td>{{nombre | slice:0:3}}</td>
+      </tr>
+      <tr>
+        <td>{{arreglo}} </td>
+        <td>slice:1:5</td>
+        <td>'&#123;'&#123;nombre | slice:1:5 &#125;&#125;</td>
+        <td>{{arreglo | slice:1:5}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number</td>
+        <td>'&#123;'&#123;PI | number}}</td>
+        <td>{{PI | number}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number</td>
+        <td>'&#123;'&#123;PI | number:'3.0-0'}}</td>
+        <td>{{PI | number:'3.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number</td>
+        <td>'&#123;'&#123;PI | number:'1.0-2'}}</td>
+        <td>{{PI | number:'1.0-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number</td>
+        <td>'&#123;'&#123;PI | number:'1.0-100'}}</td>
+        <td>{{PI | number:'1.0-100'}}</td>
+      </tr>
+      <tr>
+        <td>{{a}}</td>
+        <td>percent</td>
+        <td>'&#123;'&#123;a | percent}}</td>
+        <td>{{a | percent}}</td>
+      </tr>
+      <tr>
+        <td>{{a}}</td>
+        <td>percent</td>
+        <td>'&#123;'&#123;a | percent:'2.2-4'}}</td>
+        <td>{{a | percent:'2.2-4'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>'&#123;'&#123;salario | currency}}</td>
+        <td>{{salario | currency}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>'&#123;'&#123;salario | currency:'EUR'}}</td>
+        <td>{{salario | currency:'EUR'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>'&#123;'&#123;salario | currency:'EUR':true}}</td>
+        <td>{{salario | currency:'EUR':true}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>'&#123;'&#123;salario | currency:'EUR':true:'4.0-0'}}</td>
+        <td>{{salario | currency:'EUR':true:'4.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>number</td>
+        <td>'&#123;'&#123;salario | number}}</td>
+        <td>{{salario | number}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>number</td>
+        <td>'&#123;'&#123;salario | number:'.2-2'}}</td>
+        <td>{{salario | number:'.2-2'}}</td>
+      </tr>
+    </tbody>
+  </table>
+
+<div class="container">
+  <br>
+  <h1>Ejemplos de Slice</h1>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Arreglo</th>
+        <th>Forma de recorrer el arreglo</th>
+        <th>Resultado del recorrido</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>{{arreglo}}</td>
+        <td>*ngFor="let item of arreglo">{{item}}</td>
+        <td><li *ngFor="let item of arreglo">{{item}}</li></td>
+      </tr>
+      <tr>
+        <td>{{arreglo}}</td>
+        <td>*ngFor="let item of arreglo | slice:5:20">{{item}}</td>
+        <td><li *ngFor="let item of arreglo | slice:5:20">{{item}}</li></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+</div>
