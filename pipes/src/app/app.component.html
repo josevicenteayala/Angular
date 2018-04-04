@@ -114,6 +114,79 @@
         <td>'&#123;'&#123;salario | number:'.2-2'}}</td>
         <td>{{salario | number:'.2-2'}}</td>
       </tr>
+      <tr>
+        <td>{{persona}}</td>
+        <td>JSON</td>
+        <td>'&#123;'&#123;persona | json}}</td>
+        <td>{{persona | json}}</td>
+      </tr>
+      <tr>
+        <td>{{persona}}</td>
+        <td>JSON</td>
+        <td>'&#123;'&#123;persona | json}}</td>
+        <pre>{{persona | json}}</pre>
+      </tr>
+      <tr>
+        <td>{{valorDePromesa}}</td>
+        <td>JSON</td>
+        <td>'&#123;'&#123;valorDePromesa}}</td>
+        <pre>{{valorDePromesa}}</pre>
+      </tr>
+      <tr>
+        <td>{{valorDePromesa}}</td>
+        <td>async</td>
+        <td>'&#123;'&#123;valorDePromesa}}</td>
+        <pre>{{valorDePromesa | async}}</pre>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date</td>
+        <td>'&#123;'&#123;fecha | date}}</td>
+        <pre>{{fecha | date}}</pre>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date:'medium'</td>
+        <td>'&#123;'&#123;fecha | date:'medium'}}</td>
+        <pre>{{fecha | date:'medium'}}</pre>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date:'MMMM - dd'</td>
+        <td>'&#123;'&#123;fecha | date:'MMMM - dd'}}</td>
+        <pre>{{fecha | date:'MMMM - dd'}}</pre>
+      </tr>
+      <tr>
+        <td>{{palabaraExtrana}}</td>
+        <td>palabaraExtrana</td>
+        <td>'&#123;'&#123;palabaraExtrana}}</td>
+        <pre>{{palabaraExtrana}}</pre>
+      </tr>
+      <tr>
+        <td>{{palabaraExtrana}}</td>
+        <td>palabaraExtrana</td>
+        <td>'&#123;'&#123;palabaraExtrana | capitalizado}}</td>
+        <pre>{{palabaraExtrana | capitalizado}}</pre>
+      </tr>
+      <tr>
+        <td>{{palabaraExtrana}}</td>
+        <td>palabaraExtrana</td>
+        <td>'&#123;'&#123;palabaraExtrana | capitalizado:1:2:3:4:5}}</td>
+        <pre>{{palabaraExtrana | capitalizado:1:2:3:4:5}}</pre>
+      </tr>
+      <tr>
+        <h4 colspan="4">YouTube <small>Video</small> </h4>
+        <hr>
+        <iframe width="640" height="360" [src]="video | domseguro:'https://www.youtube.com/embed/' " frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      </tr>
+      <tr>
+        <td>Contrasena</td>
+        <td>{{password}}</td>
+        <td>
+          <button (click)="activar = !activar" type="button" class="btn btn-outline-primary btn-block">Activar/desactivaR</button>
+        </td>
+        <td>{{password | contrasena:activar}}</td>
+      </tr>
     </tbody>
   </table>
 
